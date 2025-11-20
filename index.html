@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheduled Maintenance Notice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        .page-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 24px 28px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            background-color: #ffe9d5;
+            color: #8a4000;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0 0 8px 0;
+        }
+
+        .subtitle {
+            margin: 0 0 16px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin: 6px 0 10px 0;
+            line-height: 1.5;
+        }
+
+        ul, ol {
+            margin: 6px 0 10px 24px;
+            padding: 0;
+        }
+
+        a {
+            color: #0061c2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .key-value {
+            margin: 4px 0;
+        }
+
+        .key {
+            font-weight: 600;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 18px 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="card">
+        <div class="badge">System maintenance</div>
+
+        <h1>Scheduled Maintenance Notice</h1>
+        <p class="subtitle">
+            We will be performing routine maintenance to keep our systems secure and performing well.
+        </p>
+
+        <h2>Maintenance schedule</h2>
+        <p class="key-value">
+            <span class="key">Date:</span> 21 November 2025
+        </p>
+        <p class="key-value">
+            <span class="key">Time:</span> 21:00 to 23:00 (CAT)
+        </p>
+        <p>
+            During this window some services may be temporarily unavailable.
+        </p>
+
+        <h3>Expected impact</h3>
+        <p>
+            Web access should remain available, but the mobile application may not be accessible during the maintenance
+            period.
+        </p>
+
+        <h3>If you experience issues</h3>
+        <ol>
+            <li>Log out of the system and then log back in.</li>
+            <li>If that does not resolve the problem, try using the alternate webpage:</li>
+        </ol>
+        <p>
+            Alternate webpage:
+            <a href="http://example.mydomain.com" target="_blank" rel="noopener noreferrer">
+                http://example.mydomain.com
+            </a>
+        </p>
+        <p class="footer-note">
+            Note: The alternate link is only active during the maintenance window.
+        </p>
+
+        <h3>Need help</h3>
+        <p>
+            If you have any questions or need assistance, contact our support team.
+        </p>
+        <p class="key-value">
+            <span class="key">Support number:</span> 010 000 0000
+        </p>
+
+        <p class="footer-note">
+            Thank you for your understanding and cooperation.
+        </p>
+        <p class="footer-note">
+            Kind regards<br>
+            Your company name
+        </p>
+    </div>
+</div>
+</body>
+</html>
