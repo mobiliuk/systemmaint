@@ -7,11 +7,10 @@
 
     <style>
         * { box-sizing: border-box; }
-
         body {
             margin: 0;
             padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: system-ui, sans-serif;
             background: radial-gradient(circle at top, #eef3ff, #f5f5f5);
             color: #111827;
         }
@@ -27,8 +26,8 @@
         .card {
             max-width: 840px;
             width: 100%;
-            background-color: #ffffff;
-            padding: 28px 28px 24px;
+            background-color: white;
+            padding: 28px;
             border-radius: 18px;
             box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
         }
@@ -71,87 +70,43 @@
 
         .two-column {
             display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            grid-template-columns: minmax(0,3fr) minmax(0,2fr);
             gap: 24px;
-            align-items: flex-start;
         }
 
-        .section-title { font-size: 16px; margin: 18px 0 8px 0; }
-
-        p {
-            margin: 6px 0 10px 0;
-            line-height: 1.6;
-            font-size: 14px;
-        }
+        .section-title { font-size: 16px; margin-top: 18px; }
 
         .highlight {
-            padding: 10px 12px;
-            border-radius: 10px;
+            padding: 12px;
             background-color: #eff6ff;
+            border-radius: 10px;
             color: #1e3a8a;
             font-size: 13px;
-            margin-top: 6px;
         }
-
-        .key-value { margin: 2px 0; font-size: 14px; }
-        .key { font-weight: 600; }
 
         .countdown-card {
-            border-radius: 14px;
             background-color: #0f172a;
+            padding: 18px;
+            border-radius: 14px;
             color: #f9fafb;
-            padding: 18px 18px 14px;
             text-align: center;
         }
-
-        .countdown-title { font-size: 14px; margin-bottom: 6px; color: #cbd5f5; }
 
         .countdown-time {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 8px;
         }
 
         .time-block {
             min-width: 60px;
-            padding: 8px 4px 6px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
             border-radius: 10px;
-            background-color: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(148, 163, 184, 0.4);
         }
 
-        .time-value {
-            font-size: 20px;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .time-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #9ca3af;
-        }
-
-        .countdown-note { font-size: 12px; color: #9ca3af; margin: 4px 0 0; }
-
-        ul { margin: 6px 0 10px 18px; padding: 0; font-size: 14px; }
-        li { margin-bottom: 4px; }
-
-        a { color: #2563eb; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        .footer-note {
-            margin-top: 18px;
-            font-size: 13px;
-            color: #6b7280;
-        }
-
-        @media (max-width: 720px) {
-            .card { padding: 20px 18px 18px; }
-            h1 { font-size: 24px; }
-            .two-column { grid-template-columns: minmax(0, 1fr); }
-        }
+        .time-value { font-size: 22px; font-weight: bold; }
+        .time-label { font-size: 11px; color: #cbd5f5; }
     </style>
 </head>
 
@@ -159,57 +114,44 @@
 <div class="page-wrapper">
     <div class="card">
 
-        <!-- LOGO -->
-        <div style="text-align:center; margin-bottom:25px;">
-            <img src="image.png" alt="Company Logo" style="max-width:320px; width:100%; height:auto;">
+        <!-- Logo -->
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="image.png" style="max-width:320px; width:100%; height:auto;">
         </div>
 
         <div class="badge">
             <span class="badge-dot"></span>
-            Scheduled maintenance
+            Scheduled Maintenance
         </div>
 
-        <h1>We're currently offline for planned maintenance</h1>
+        <h1>We’re currently offline for planned maintenance</h1>
 
         <p class="subtitle">
-            Our data centre is completing essential upgrades to improve capacity, power stability and future performance.
-            We know you rely on this system to support your clients and teams, and these improvements are part of making
-            sure you receive a more reliable service long-term.
+            Our data centre is performing essential power and capacity upgrades. This is aimed at improving stability,
+            resilience and future performance for all our clients.
         </p>
 
         <div class="two-column">
             <div>
                 <h2 class="section-title">What this means</h2>
-                <p>
-                    The system is temporarily unavailable. Your data remains safe, and no action is required from you.
-                    Service will return automatically once the work is complete.
-                </p>
+                <p>The system is temporarily offline. No action is required from you and your data remains safe.</p>
 
-                <p class="highlight">
-                    The data centre is increasing power capacity, improving load handling and strengthening resilience.
-                    This helps protect against future power-related issues and ensures smoother performance.
-                </p>
+                <h2 class="section-title">Maintenance Window</h2>
+                <p><strong>Date:</strong> 21 November</p>
+                <p><strong>Time:</strong> 19:00 – 23:00</p>
 
-                <h2 class="section-title">Maintenance window</h2>
-                <p class="key-value"><span class="key">Date:</span> 21 November</p>
-                <p class="key-value"><span class="key">Time:</span> 19:00 to 23:00</p>
-
-                <h2 class="section-title">After the maintenance</h2>
+                <h2 class="section-title">After the Maintenance</h2>
                 <p>If you still cannot access the system after 23:00:</p>
                 <ul>
-                    <li>Close your browser and reopen it</li>
-                    <li>Try signing out and back in</li>
-                    <li>Contact support if issues continue</li>
+                    <li>Refresh your browser</li>
+                    <li>Try signing in again</li>
+                    <li>Email missupport@mobil-i.com if issues continue</li>
                 </ul>
-
-                <h2 class="section-title">Contact us</h2>
-                <p>If you have questions or want updates during the maintenance:</p>
-                <p><a href="mailto:missupport@mobil-i.com">missupport@mobil-i.com</a></p>
             </div>
 
             <div>
                 <div class="countdown-card">
-                    <div class="countdown-title">Time remaining</div>
+                    <h3>Time Remaining</h3>
 
                     <div id="countdown" class="countdown-time">
                         <div class="time-block">
@@ -226,14 +168,10 @@
                         </div>
                     </div>
 
-                    <p id="countdown-message" class="countdown-note">
+                    <p id="doneMsg" style="margin-top:10px; color:#9ca3af;">
                         Scheduled to complete by 23:00 today.
                     </p>
                 </div>
-
-                <p class="footer-note">
-                    Thanks for your patience — this work is part of giving you a stronger and more reliable platform.
-                </p>
             </div>
         </div>
 
@@ -241,22 +179,28 @@
 </div>
 
 <script>
-(function () {
-    function pad(n) { return n.toString().padStart(2, "0"); }
+(function() {
 
-    function targetToday2300() {
+    function pad(n) { return n.toString().padStart(2, '0'); }
+
+    function targetTime() {
         var now = new Date();
-        return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 0, 0);
+        return new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate(),
+            23, 0, 0
+        );
     }
 
-    var target = targetToday2300();
+    var target = targetTime();
 
     var h = document.getElementById("hours");
     var m = document.getElementById("minutes");
     var s = document.getElementById("seconds");
-    var msg = document.getElementById("countdown-message");
+    var msg = document.getElementById("doneMsg");
 
-    function update() {
+    function updateCountdown() {
         var now = new Date();
         var diff = target - now;
 
@@ -264,23 +208,24 @@
             h.textContent = "00";
             m.textContent = "00";
             s.textContent = "00";
-            msg.textContent = "The maintenance window has ended. Please try signing in again or email missupport@mobil-i.com.";
+            msg.textContent = "Maintenance window has ended.";
             return;
         }
 
-        var seconds = Math.floor(diff / 1000);
-        var hours = Math.floor(seconds / 3600);
-        seconds %= 3600;
-        var minutes = Math.floor(seconds / 60);
-        seconds %= 60;
+        var sec = Math.floor(diff / 1000);
+        var hrs = Math.floor(sec / 3600);
+        sec %= 3600;
+        var mins = Math.floor(sec / 60);
+        sec %= 60;
 
-        h.textContent = pad(hours);
-        m.textContent = pad(minutes);
-        s.textContent = pad(seconds);
+        h.textContent = pad(hrs);
+        m.textContent = pad(mins);
+        s.textContent = pad(sec);
     }
 
-    update();
-    setInterval(update, 1000);
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
 })();
 </script>
 
