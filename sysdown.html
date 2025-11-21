@@ -241,47 +241,47 @@
 </div>
 
 <script>
-    (function () {
-        function pad(n) { return n.toString().padStart(2, "0"); }
+(function () {
+    function pad(n) { return n.toString().padStart(2, "0"); }
 
-        function targetToday2300() {
-            var now = new Date();
-            return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 0, 0);
+    function targetToday2300() {
+        var now = new Date();
+        return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 0, 0);
+    }
+
+    var target = targetToday2300();
+
+    var h = document.getElementById("hours");
+    var m = document.getElementById("minutes");
+    var s = document.getElementById("seconds");
+    var msg = document.getElementById("countdown-message");
+
+    function update() {
+        var now = new Date();
+        var diff = target - now;
+
+        if (diff <= 0) {
+            h.textContent = "00";
+            m.textContent = "00";
+            s.textContent = "00";
+            msg.textContent = "The maintenance window has ended. Please try signing in again or email missupport@mobil-i.com.";
+            return;
         }
 
-        var target = targetToday2300();
+        var seconds = Math.floor(diff / 1000);
+        var hours = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        var minutes = Math.floor(seconds / 60);
+        seconds %= 60;
 
-        var h = document.getElementById("hours");
-        var m = document.getElementById("minutes");
-        var s = document.getElementById("seconds");
-        var msg = document.getElementById("countdown-message");
+        h.textContent = pad(hours);
+        m.textContent = pad(minutes);
+        s.textContent = pad(seconds);
+    }
 
-        function update() {
-            var now = new Date();
-            var diff = target - now;
-
-            if (diff <= 0) {
-                h.textContent = "00";
-                m.textContent = "00";
-                s.textContent = "00";
-                msg.textContent = "The maintenance window has ended. Please try signing in again or contact missupport@mobil-i.com.";
-                return;
-            }
-
-            var seconds = Math.floor(diff / 1000);
-            var hours = Math.floor(seconds / 3600);
-            seconds %= 3600;
-            var minutes = Math.floor(seconds / 60);
-            seconds %= 60;
-
-            h.textContent = pad(hours);
-            m.textContent = pad(minutes);
-            s.textContent = pad(seconds);
-        }
-
-        update();
-        setInterval(update, 1000);
-    })();
+    update();
+    setInterval(update, 1000);
+})();
 </script>
 
 </body>
